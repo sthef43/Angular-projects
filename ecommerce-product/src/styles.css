@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .links-menu-hamburguesa{
+        @apply font-bold text-base
+    }
+    .links-menu-hamburguesa-desktop{
+        @apply relative font-semibold text-2xl text-gray-300 hover:text-gray-700
+    }
+    .links-menu-hamburguesa-desktop::after{
+        @apply content-[''] bg-red-400 h-1 w-[0%] absolute left-0 -bottom-10 duration-300 rounded-xl
+    }
+    .links-menu-hamburguesa-desktop:hover::after{
+        @apply w-full
+    }
+
+    .fondo-oscuro{
+        @apply bg-slate-950 absolute opacity-45 w-full h-full p-0 z-20 left-0 duration-700
+        
+    }
+
+    .cart-style{
+        @apply hidden duration-300 border-2 bg-white border-gray-200 shadow-2xl absolute w-[22.5rem] left-0 right-0 top-0 bottom-0 mt-1 m-auto rounded-xl h-[17rem]
+    }
+    .cart-style.active{
+        @apply block
+    }
+}
