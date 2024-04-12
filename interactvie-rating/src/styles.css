@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .puntuacionActive{
+        @apply hidden
+    }
+    .puntuacionElegida{
+        @apply flex flex-col items-center m-auto max-w-[530px] bg-gray-800 p-[3.75rem] rounded-xl
+    }
+    .puntuacionStyle{
+        @apply m-auto max-w-[530px] bg-gray-800 p-[3.75rem] rounded-xl hidden
+    }
+
+    .button-raiting{
+        @apply bg-red-700 text-3xl w-16 h-16 rounded-full mt-11 text-gray-500
+        hover:bg-orange-500 text-white
+    }
+    .button-submit{
+        @apply mt-8 bg-orange-500 w-full h-14 rounded-full text-xl font-semibold text-white
+        hover:bg-white hover:text-orange-500
+    }
+    .active{
+        @apply bg-red-300
+    }
+}

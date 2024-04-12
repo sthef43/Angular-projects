@@ -1,0 +1,27 @@
+<main class="w-screen h-screen bg-gray-900 flex flex-col">
+    <section [ngClass]="{'puntuacionActive':!enviado}" class="m-auto max-w-[530px] bg-gray-800 p-12 rounded-xl">
+        <figure class="w-10 bg-gray-700 rounded-full p-2">
+            <img class="w-10" src="../../assets/icon-star.svg" alt="">
+        </figure>
+        <p class="text-white text-2xl font-semibold mt-6">How did we do?</p>
+        <p class="text-gray-300 text-lg mt-5">please let us know how we did with your support request. All feedback is appreciated to help us
+            improve our offering!
+        </p>
+        <div class="flex flex-row justify-between">
+            @for (item of botones(); track item; let i = $index) {
+                <button [ngClass]="{'active': botonSeleccionado === item}" class="button-raiting" (click)="devolverValor(item)">{{item}}</button>
+            }
+        </div>
+        <button class="button-submit" (click)="enviarFormulario($event)">SUBMIT</button>
+    </section>
+    <section [ngClass]="{'puntuacionElegida':!enviado,'puntuacionStyle':enviado}">
+        <figure>
+            <img src="../../assets/illustration-thank-you.svg" alt="">
+        </figure>
+        <p class="mt-8 text-orange-600 bg-gray-600 px-7 py-1 rounded-lg">You selected {{valorInput()}} out of 5</p>
+        <div class="text-center mt-7">
+            <p class="text-3xl text-white font-semibold">Thank you!</p>
+            <p class="text-gray-300 text-lg mt-5">We appreciate you taking the time to give a rating. if you ever need more support, don´t hesitate to get in touch!</p>
+        </div>
+    </section>
+</main>
