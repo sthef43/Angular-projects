@@ -1,0 +1,99 @@
+<main class="w-screen h-screen xl:flex xl:items-center xl:justify-center">
+    <section class="max-w-[375px] xl:max-w-screen-xl xl:flex xl:flex-row xl:items-center xl:justify-center">
+        <figure class="relative">
+            <img class="relative w-full h-72 xl:hidden" src="../../assets/bg-main-mobile.png" alt="">
+            <img class="hidden xl:block xl:h-[55rem] xl:w-[30rem]" src="../../assets/bg-main-desktop.png" alt="">
+            <img class="max-w-72 absolute top-14 left-[4.5rem] xl:max-w-96 xl:top-[25rem] xl:left-60" src="../../assets/bg-card-back.png" alt="" width="375">
+            <img class="max-w-72 absolute top-40  left-4 xl:max-w-96 xl:left-40" src="../../assets/bg-card-front.png" alt="" width="375">
+            <div class="block absolute w-72 pl-5 top-60 left-4 text-white xl:w-96 xl:left-40 xl:top-[17rem]">
+                @if (numberCard.touched) {
+                    <p class="text-xl tracking-[3px] xl:text-2xl">{{ numeros() }}</p>
+                }@else{
+                    <p class="text-xl tracking-[3px] xl:text-2xl">0000 0000 0000 0000</p>
+                }
+                <div class="flex absolute top-8 w-full mt-3 xl:top-9 xl:text-xl">
+                    @if (nameCard.touched) {
+                        <p>{{ nameCard.value }}</p>
+                    }@else {
+                        <p>Jane appleseed</p>
+                    }
+                    @if (numberDateExp.touched){
+                        <p class="absolute left-[13rem] xl:left-[17rem]">{{numberExp.value}}/{{numberDateExp.value}}</p>
+                    }@else {
+                        <p class="absolute left-[13rem] xl:left-[17rem]">00/00</p>
+                    }
+                </div>
+            </div>
+            <div class="block absolute max-w-72 pl-5 top-[7.6rem] left-[17.5rem] text-white xl:top-[30.5rem] xl:left-[32.5rem] xl:text-xl">
+                @if (numberCVC.touched) {
+                    <p>{{numberCVC.value}}</p>
+                }@else {
+                    <p>000</p>
+                }
+            </div>
+        </figure>
+        <section [class.active]="isAceptable" class="inputs-card">
+            <label class="mb-2" for="cardholder-name">CARHOLDER NAME</label>
+            <input class="inputs-name-number" type="text" name="cardholder-name" id="cardholder-name" placeholder="e.g. Jane Appleseed" 
+            (keyup)="mostrarNombre()"
+            [class.erorr]="nameCard.invalid && nameCard.touched"
+            [formControl]="nameCard">
+            <p class="error-mesaje"[class.active]="nameCard.invalid && nameCard.touched">Wrong Format, Letters Only</p>
+            
+            <label class="mt-2 mb-2" for="card-number">CARD NUMBER</label>
+            <input
+            class="inputs-name-number" 
+            type="text"
+            maxlength="20"
+            [class.erorr]="numberCard.invalid && numberCard.touched"
+            (keyup)="mostrarNumero(numberCard.value)"
+            
+            name="card-number" 
+            id="card-number" 
+            placeholder="e.g. 1234 1234 1234 5678" 
+            [formControl]="numberCard">
+            <p class="error-mesaje"[class.active]="numberCard.invalid && numberCard.touched">Wrong Format, Numbers Only</p>
+            <div class="flex">
+                <div class="inline-block text-center">
+
+                    <label for="exp-date">EXP.DATE</label>
+                    <input class="inputs-expDate-MMYY" 
+                    type="text" name="exp-date" id="exp-date" placeholder="MM"
+                    [class.error]="numberExp.invalid && numberExp.touched"
+                    (keyup)="mostrarFechaExp()" 
+                    [formControl]="numberExp">
+                    <p class="error-mesaje"[class.active]="numberExp.invalid && numberExp.touched">Error</p>
+
+                </div>
+                <div class="inline-block text-center">
+
+                    <label for="mm/yy">(MM/YY)</label>
+                    <input class="inputs-expDate-MMYY" 
+                    type="text" name="mm/yy" id="mm/yy" placeholder="YY" 
+                    [class.error]="numberDateExp.invalid && numberDateExp.touched"
+                    (keyup)="mostrarFechaExp()" 
+                    [formControl]="numberDateExp">
+                    <p class="error-mesaje"[class.active]="numberDateExp.invalid && numberDateExp.touched">Error</p>
+
+                </div>
+                <div class="inline-block">
+
+                    <label class="ml-4" for="cvc">CVC</label>
+                    <input class="input-cvc" type="text" name="cvc" id="cvc" placeholder="e.g. 123"
+                    [class.erorr]="numberCVC.invalid && numberCVC.touched"
+                    (keyup)="mostrarNumeroCVC()"
+                    [formControl]="numberCVC">
+                    <p class="error-mesaje ml-4"[class.active]="numberCVC.invalid && numberCVC.touched">Wrong Format</p>
+
+                </div>
+            </div>
+            <button [disabled]="numberCVC.invalid" (click)="mostrarMensaje()" type="submit" class="bg-violet-950 text-white text-xl border border-black mt-8 h-14 rounded-xl mb-8">Confirm</button>
+        </section>
+        <section [class.active]="isAceptable" class="mensaje-aceptable">
+            <img src="../../assets/icon-complete.svg" alt="">
+            <p class="mt-7 text-2xl uppercase">Thank You!</p>
+            <p class="mt-3 text-gray-400">We´ve added your card details</p>
+            <button class="bg-violet-950 text-white text-xl border border-black mt-8 h-14 rounded-xl mb-8 w-full xl:w-80">Continue</button>
+        </section>
+    </section>
+</main>

@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .inputs-name-number{
+        @apply border h-12 pl-4 rounded-lg
+        focus:outline-violet-950
+    }
+    .inputs-name-number.erorr{
+        @apply focus:outline-red-400 border-red-400 border-[2px]
+    }
+
+    .inputs-expDate-MMYY{
+        @apply border ml-2 w-[4.5rem] h-10 rounded-xl pl-3 focus:outline-violet-950
+    }
+    .input-cvc{
+        @apply border ml-2 w-44 h-10 rounded-xl pl-3 focus:outline-violet-950
+    }
+    .input-cvc.erorr,
+    .inputs-expDate-MMYY.error{
+        @apply focus:outline-red-400 border-red-400 border-[2px]
+    }
+
+    .inputs-card{
+        @apply px-5 mt-20 flex flex-col
+        xl:mt-0 xl:ml-60 xl:w-96
+    }
+    .inputs-card.active{
+        @apply hidden
+    }
+
+    .mensaje-aceptable{
+        @apply px-5 mt-20 hidden
+        xl:mt-0 xl:pl-72
+    }
+    .mensaje-aceptable.active{
+        @apply flex flex-col items-center
+    }
+
+
+    .error-mesaje{
+        @apply font-semibold my-1 opacity-0 text-red-500
+    }
+    .error-mesaje.active{
+        @apply opacity-100
+    }
+}
