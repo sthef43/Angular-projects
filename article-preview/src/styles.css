@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    .footer-active{
+        @apply flex items-center justify-between pb-5 px-10 min-h-[76px] xl:flex-row relative
+    }
+    .footer-inactive{
+        @apply hidden xl:flex xl:items-center xl:justify-between xl:pb-5 xl:px-10 xl:min-h-[76px] xl:flex-row relative
+    }
+
+    .footer-social-inactive{
+        @apply hidden
+    }
+    .footer-social-active{
+        @apply bg-gray-700 py-5 px-10 rounded-b-xl block min-h-[76px]
+    }
+
+    .etiqueta-social-inactive{
+        @apply hidden
+    }
+    .etiqueta-social-active{
+        @apply hidden xl:flex bg-gray-600 flex-row space-x-7 h-9 bottom-96 right-5 items-center p-6 rounded-lg absolute z-30
+    }
+}
