@@ -1,0 +1,83 @@
+<main [class.overflow-y-hidden]="!mostrarMenu()" class="relative px-5 w-screen h-screen overflow-x-hidden max-w-[375px] m-auto xl:max-w-screen-xl">
+    <section [class.fondo-negro]="!mostrarMenu()"></section>
+    <header class="flex justify-between items-center py-5 xl:py-12">
+        <p class="text-3xl font-bold">W.</p>
+        <button (click)="activarMenu()"><img class="cursor-pointer xl:hidden" src="../../assets/icon-menu.svg" alt=""></button>
+        <ul class="space-x-6 hidden xl:flex">
+            <li><a href="" class="links-menu-navbar">Home</a></li>
+            <li><a href="" class="links-menu-navbar">New</a></li>
+            <li><a href="" class="links-menu-navbar">Popular</a></li>
+            <li><a href="" class="links-menu-navbar">Trending</a></li>
+            <li><a href="" class="links-menu-navbar">Categories</a></li>
+        </ul>
+    </header>
+    <div class="xl:flex">
+        <section>
+            <img class="xl:hidden" src="../../assets/image-web-3-mobile.jpg">
+            <img class="hidden xl:block xl:w-full xl:pr-9" src="../../assets/image-web-3-desktop.jpg" alt="">
+            <div class="xl:flex xl:items-start xl:mt-5">
+                <p class="my-4 text-5xl xl:text-[3.5rem]"><strong>The Brigth Future of Web 3.0?</strong></p>
+                <div class="my-4 flex flex-col items-start xl:my-4 xl:mr-7">
+                    <p class="xl:text-xl xl:w-[27rem]">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it
+                        really fulfiling its promise?
+                    </p>
+                    <button class="read-more-btn">READ MORE</button>
+                </div>
+            </div>
+        </section>
+        <section class="bg-blue-950 mt-11 p-4 text-white xl:p-5 xl:mt-0 xl:flex xl:flex-col xl:justify-evenly">
+            <p class="text-3xl font-semibold text-orange-300 mb-5 xl:text-5xl">New</p>
+            <div class="mb-6 xl:pr-8">
+                <a href="" class="links-menu-new">Hydrogen VS Electric Cars</a>
+                <p class="text-lg">Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </div>
+            <div class="border-y py-7 xl:pr-8">
+                <a href="" class="links-menu-new">The Downsides of AI artistry</a>
+                <p class="text-lg">What are the possible adverse effects of on-demand AI image generation?</p>
+            </div>
+            <div class="mt-6 xl:pr-8">
+                <a href="" class="links-menu-new">Is VC Funding Drying Up?</a>
+                <p class="text-lg">Private funding by VC firms is down 50% YOY. We take a look at What that means.</p>
+            </div>
+        </section>
+    </div>
+    <section class="mt-11 space-y-7 mb-10 xl:flex xl:space-x-8 xl:items-end">
+        <figure class="flex">
+            <img class="max-w-24 xl:max-w-28" src="../../assets/image-retro-pcs.jpg" alt="">
+            <div class="flex flex-col justify-between ml-[1.2rem]">
+                <p class="text-3xl font-semibold text-gray-400 xl:text-4xl">01</p>
+                <a href="" class="links-menu-list">Reviving Retor PCs</a>
+                <p class="xl:pr-6">What happens when old PCs are given modern upgrades?</p>
+            </div>
+        </figure>
+        <figure class="flex">
+            <img class="max-w-24 xl:max-w-28" src="../../assets/image-top-laptops.jpg" alt="">
+            <div class="flex flex-col justify-between ml-[1.2rem]">
+                <p class="text-3xl font-semibold text-gray-400 xl:text-4xl">02</p>
+                <a href="" class="links-menu-list">Top 10 Laptops of 2022</a>
+                <p class="xl:pr-6">Our best picks for various needs and budgets?</p>
+            </div>
+        </figure>
+        <figure class="flex">
+            <img class="max-w-24 xl:max-w-28" src="../../assets/image-gaming-growth.jpg" alt="">
+            <div class="flex flex-col justify-between ml-[1.2rem]">
+                <p class="text-3xl font-semibold text-gray-400 xl:text-4xl">03</p>
+                <a href="" class="links-menu-list">The Growth of Gaming</a>
+                <p class="xl:pr-6">How the pandemic has sparked fresh opportunities.</p>
+            </div>
+        </figure>
+    </section>
+    <section class=" bg-white absolute top-0 right-0 w-60 h-screen p-5 transition-transform duration-300"
+    [class.translate-x-full]="mostrarMenu()">
+        <img (click)="activarMenu()" class="cursor-pointer relative left-40" src="../../assets/icon-menu-close.svg" alt="">
+        <div class="mt-28 ml-1">
+            <ul>
+                <li class="mt-5"><a href="" class="links-menu-navbar">Home</a></li>
+                <li class="mt-5"><a href="" class="links-menu-navbar">New</a></li>
+                <li class="mt-5"><a href="" class="links-menu-navbar">Popular</a></li>
+                <li class="mt-5"><a href="" class="links-menu-navbar">Trending</a></li>
+                <li class="mt-5"><a href="" class="links-menu-navbar">Categories</a></li>
+            </ul>
+        </div>
+    </section>
+</main>

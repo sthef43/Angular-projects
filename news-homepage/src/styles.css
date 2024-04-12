@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .read-more-btn{
+        @apply bg-orange-400 w-44 h-12 mt-4 font-semibold text-white tracking-[.2rem]
+        hover:bg-blue-950 duration-300
+    }
+
+    .links-menu-navbar{
+        @apply text-xl font-semibold
+        hover:text-orange-400 duration-300
+    }
+    .links-menu-list{
+        @apply text-xl font-bold xl:text-xl
+        hover:text-orange-400 duration-300
+    }
+    .links-menu-new{
+        @apply font-semibold text-[1.35rem] mb-2 xl:text-2xl
+        hover:text-orange-300 duration-300
+    }
+
+    .navBarInactive{
+        @apply hidden 
+    }
+    .navBarActive{
+        @apply block translate-x-0 z-20
+    }
+
+    .fondo-negro{
+        @apply bg-slate-900 opacity-50 w-full h-full p-0 absolute z-0 left-0 duration-700
+    }
+}
