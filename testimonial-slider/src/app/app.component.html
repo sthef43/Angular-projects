@@ -1,0 +1,58 @@
+<main class="max-w-[375px] flex flex-col items-center relative overflow-hidden xl:max-w-screen-xl xl:m-auto">
+  <ul [class.mr-next]="!next()" [class.mr-nextDesktop]="!nextDesktop()" class="flex w-full justify-start xl:flex-row">
+    <section class="mt-7 px-4 relative w-[375px] xl:min-w-[1280px] xl:px-0">
+      <figure class="relative xl:left-[42rem] xl:top-5">
+        <img class="max-w-[343px] xl:max-w-[34rem] xl:relative xl:left-0" src="../assets/pattern-bg.svg" alt="">
+        <img class="absolute top-12 left-[3.25rem] w-[16.5rem] shadow-2xl xl:w-[26.5rem]" src="../assets/image-tanya.jpg" alt="">
+        <div class="inline-block absolute -bottom-2 right-[7.5rem] xl:hidden">
+          <button class="border border-white bg-white px-3 py-3 rounded-l-full"><img src="../assets/icon-prev.svg" alt=""></button>
+          <button (click)="toggleNext()" class="border border-white bg-white px-3 py-3 rounded-r-full"><img src="../assets/icon-next.svg" alt=""></button>
+        </div>
+        <div class="hidden xl:inline-block xl:absolute xl:right-0 xl:left-20 xl:bottom-4">
+          <button class="border border-white bg-white px-3 py-3 rounded-l-full"><img src="../assets/icon-prev.svg" alt=""></button>
+          <button (click)="toggleNextDesktop()" class="border border-white bg-white px-3 py-3 rounded-r-full"><img src="../assets/icon-next.svg" alt=""></button>
+        </div>
+      </figure>
+      <div class="text-center mt-14 relative">
+        <div class="xl:absolute xl:text-start xl:-top-[18rem] xl:w-[31rem] xl:left-20">
+          <p class="text-xl font-semibold xl:text-2xl">"I´ve been interesed in conding for a while but never taken the jump, until now. I couldn´t recommend this course enough. I´m now in the job of my dreams and so excited about the
+            future. "
+          </p>
+          <img class="w-20 absolute -top-5 left-0 right-0 m-auto" src="../assets/pattern-quotes.svg" alt="">
+          <div class="mt-4 text-lg">
+            <p class="font-bold">Tanya Sinclair</p>
+            <p class="text-gray-400 font-semibold">UX Engineer</p>
+          </div>
+        </div>
+        <img class="top-3 relative -left-4 xl:left-0" src="../assets/pattern-curve.svg" alt="">
+      </div>
+    </section>
+    <section class="mt-7 px-4 relative w-[375px] xl:min-w-[1280px] xl:px-0">
+      <figure class="relative xl:left-[42rem] xl:top-5">
+        <img class="max-w-[343px] xl:max-w-[34rem] xl:relative xl:left-0" src="../assets/pattern-bg.svg" alt="">
+        <img class="absolute top-12 left-[3.25rem] w-[16.5rem] shadow-2xl xl:w-[26.5rem]" src="../assets/image-john.jpg" alt="">
+        <div class="absolute -bottom-2 right-[7.5rem] xl:hidden">
+          <button class="border border-white bg-white px-3 py-3 rounded-l-full"><img src="../assets/icon-prev.svg" alt=""></button>
+          <button (click)="toggleNext()" class="border border-white bg-white px-3 py-3 rounded-r-full"><img src="../assets/icon-next.svg" alt=""></button>
+        </div>
+        <div class="hidden xl:inline-block xl:absolute xl:right-0 xl:left-20 xl:bottom-4">
+          <button class="border border-white bg-white px-3 py-3 rounded-l-full"><img src="../assets/icon-prev.svg" alt=""></button>
+          <button (click)="toggleNextDesktop()" class="border border-white bg-white px-3 py-3 rounded-r-full"><img src="../assets/icon-next.svg" alt=""></button>
+        </div>
+      </figure>
+      <div class="text-center mt-14 relative">
+        <div class="xl:absolute xl:text-start xl:-top-[18rem] xl:w-[31rem] xl:left-20">
+          <p class="text-xl font-semibold xl:text-2xl">"I´ve been interesed in conding for a while but never taken the jump, until now. I couldn´t recommend this course enough. I´m now in the job of my dreams and so excited about the
+            future. "
+          </p>
+          <img class="w-20 absolute -top-5 left-0 right-0 m-auto" src="../assets/pattern-quotes.svg" alt="">
+          <div class="mt-4 text-lg">
+            <p class="font-bold">Tanya Sinclair</p>
+            <p class="text-gray-400 font-semibold">UX Engineer</p>
+          </div>
+        </div>
+        <img class="top-3 relative -left-4 xl:left-0" src="../assets/pattern-curve.svg" alt="">
+      </div>
+    </section>
+  </ul>
+</main>
