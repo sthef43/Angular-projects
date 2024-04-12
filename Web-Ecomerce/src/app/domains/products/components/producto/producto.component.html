@@ -1,0 +1,11 @@
+<article class="border border-gray-200 rounded-md w-full text-center pb-2">
+    <a href="">
+        <img class="w-full h-full object-contain rounded-t-md hover:opacity-75 cursor-pointer" [src]="product.images[1]" [alt]="product.title">
+    </a>
+    <div class="px-2 text-left flex flex-col space-y-2">
+        <p class="text-sm mt-2 text-gray-700">{{ product.title |uppercase }}</p>
+        <p class="text-xs"><strong>{{ product.price |currency:'$':'symbol':'1.0' }}</strong></p>
+        <p class="text-xs"><strong>{{ product.creationAt }}</strong></p>
+        <button (click)="agregarAlCarroBoton()" class="bg-slate-400 w-full mt-3 h-9 rounded-lg text-center text-black font-semibold">Añadir al carro</button>
+    </div>
+</article>
