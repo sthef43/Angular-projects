@@ -1,0 +1,85 @@
+<header class="flex w-full items-baseline p-4 justify-between mb-3 relative z-20">
+    <button (click)="toggleMenu()"><img class="xl:hidden" src="../../assets/icon-menu.svg" alt=""></button>
+    <nav [class.translate-x-full]="isActive()" class="xl:hidden h-screen w-60 bg-gray-100 absolute top-0 right-0 p-5 flex flex-col items-center transition-transform duration-500">
+        <figure class="w-full flex flex-col items-end">
+            <img (click)="toggleMenu()" src="../../../../assets/icon-close-menu.svg" alt="">
+        </figure>
+        <div class="flex flex-col mt-11 space-y-4 w-full mb-5">
+            <button (click)="toggleDropDown('features')" class="flex items-baseline font-semibold text-gray-600">Features
+                <img [class.rotate-180]="!features()" class="ml-2 transition-transform duration-300" src="../../../../assets/icon-arrow-down.svg" alt="">
+            </button>
+            <div [class.active]="!features()" class="dropdown-menu">
+                <figure class="flex items-center">
+                    <img src="../../../../assets/icon-todo.svg" alt="">
+                    <p class="ml-3 text-gray-600 font-semibold">Todo List</p>
+                </figure>
+                <figure class="flex items-center">
+                    <img src="../../../../assets/icon-calendar.svg" alt="">
+                    <p class="ml-3 text-gray-600 font-semibold">Calendar</p>
+                </figure>
+                <figure class="flex items-center">
+                    <img src="../../../../assets/icon-reminders.svg" alt="">
+                    <p class="ml-3 text-gray-600 font-semibold">Reminders</p>
+                </figure>
+                <figure class="flex items-center">
+                    <img src="../../../../assets/icon-planning.svg" alt="">
+                    <p class="ml-3 text-gray-600 font-semibold">Planning</p>
+                </figure>
+            </div>
+            <button (click)="toggleDropDown('company')" class="flex items-baseline font-semibold text-gray-600">Company
+                <img [class.rotate-180]="!company()" class="ml-2 transition-transform duration-300" src="../../../../assets/icon-arrow-down.svg" alt="">
+            </button>
+            <div [class.active]="!company()" class="dropdown-menu">
+                <a class="text-gray-600 font-semibold" href="">History</a>
+                <a class="text-gray-600 font-semibold" href="">Our Team</a>
+                <a class="text-gray-600 font-semibold" href="">Blog</a>
+            </div>
+            <a class="font-semibold text-gray-600" href="">Careers</a>
+            <a class="font-semibold text-gray-600" href="">About</a>
+        </div>
+        <a class="text-gray-600 font-semibold" href="">Login</a>
+        <a class="w-full mt-3 text-gray-600 font-semibold" href=""><button class="border-2 border-gray-400 w-full h-10 rounded-xl">Register</button></a>
+    </nav>
+    <nav class="hidden xl:flex xl:flex-row xl:items-baseline space-x-12 w-full">
+        <p class="pl-3 text-3xl font-bold">Snap</p>
+        <div class="dropdown">
+            <span (click)="toggleDropDown('features')" class="hover:text-black flex items-baseline text-gray-600 font-semibold text-lg cursor-pointer pb-2">Features 
+                <img [class.rotate-180]="!features()" class="ml-2 transition-transform duration-300" src="../../../../assets/icon-arrow-down.svg" alt="">
+            </span>
+            <div [class.active]="!features()" class="dropdown-content -right-[.25rem]">
+                <figure class="xl:flex xl:items-center space-x-3">
+                    <img class="w-4" src="../../../../assets/icon-todo.svg" alt="">
+                    <p class="text-gray-600 font-semibold">Todo List</p>
+                </figure>
+                <figure class="xl:flex xl:items-center space-x-3">
+                    <img class="w-4" src="../../../../assets/icon-calendar.svg" alt="">
+                    <p class="text-gray-600 font-semibold">Calendar</p>
+                </figure>
+                <figure class="xl:flex xl:items-center space-x-3">
+                    <img class="w-4" src="../../../../assets/icon-reminders.svg" alt="">
+                    <p class="text-gray-600 font-semibold">Reminders</p>
+                </figure>
+                <figure class="xl:flex xl:items-center space-x-3">
+                    <img class="w-4" src="../../../../assets/icon-planning.svg" alt="">
+                    <p class="text-gray-600 font-semibold">Planning</p>
+                </figure>
+            </div>
+        </div>
+        <div class="dropdown">
+            <span (click)="toggleDropDown('company')" class="hover:text-black flex items-baseline text-gray-600 font-semibold text-lg cursor-pointer pb-2">Company 
+                <img [class.rotate-180]="!company()" class="ml-2 transition-transform duration-300" src="../../../../assets/icon-arrow-down.svg" alt="">
+            </span>
+            <div [class.active]="!company()" class="dropdown-content">
+                <a class="text-gray-600 font-semibold" href="">History</a>
+                <a class="text-gray-600 font-semibold" href="">Our Team</a>
+                <a class="text-gray-600 font-semibold" href="">Blog</a>
+            </div>
+        </div>
+        <a class="text-gray-600 font-semibold text-lg hover:text-black" href="">Careers</a>
+        <a class="text-gray-600 font-semibold text-lg hover:text-black" href="">About</a>
+        <div class="w-full relative left-96 space-x-7">
+            <a class="font-semibold text-gray-600 text-lg cursor-pointer hover:text-black">Login</a>
+            <a href=""><button class="w-24 h-10 mt-3 rounded-xl text-gray-600 font-semibold border-2 text-lg hover:border-2 hover:text-black hover:border-black">Register</button></a>
+        </div>
+    </nav>
+</header>

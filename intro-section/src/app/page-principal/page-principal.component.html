@@ -1,0 +1,26 @@
+<main class="w-screen h-screen m-auto max-w-[375px] relative overflow-x-hidden xl:max-w-screen-xl">
+    <section [class.fondo-oscuro]="!isActive()"></section>
+    <header class="flex w-full  justify-between">
+        <p class="pl-3 text-3xl font-bold xl:hidden">snap</p>
+        <app-header></app-header>
+    </header>
+    <section class="flex flex-col items-center p-4 text-center xl:flex-row-reverse xl:text-left xl:justify-between">
+        <figure class="">
+            <img class="xl:hidden mb-5" src="../../assets/image-hero-mobile.png" alt="">
+            <img class="hidden xl:block xl:max-w-[32rem]" src="../../assets/image-hero-desktop.png" alt="">
+        </figure>
+            <div class="xl:flex xl:flex-col xl:items-start xl:w-[37rem]">
+                <p class="text-4xl font-bold xl:text-8xl">Make remote work</p>
+                <p class="text-[1.11rem] font-semibold mt-3 xl:text-2xl xl:mt-14">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+                    productivity soar.
+                </p>
+                <button class="learn-more">Learn More</button>
+                <figure class="flex flex-row items-center justify-between w-[21rem] xl:w-[30rem] mt-8 xl:relative top-24">
+                    <img class="w-[4.25rem] xl:w-20" src="../../assets/client-databiz.svg" alt="">
+                    <img class="w-[4.25rem] xl:w-20" src="../../assets/client-audiophile.svg" alt="">
+                    <img class="w-[4.25rem] xl:w-20" src="../../assets/client-meet.svg" alt="">
+                    <img class="w-[4.25rem] xl:w-20" src="../../assets/client-maker.svg" alt="">
+                </figure>
+            </div>
+        </section>
+</main>

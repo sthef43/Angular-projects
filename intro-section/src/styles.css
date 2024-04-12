@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .fondo-oscuro{
+        @apply bg-slate-950 absolute opacity-45 w-full h-full p-0 z-20 left-0 duration-700
+    }
+
+    .learn-more{
+        @apply bg-black text-white w-32 h-10 mt-5 rounded-xl font-bold
+        xl:w-48 xl:h-12 xl:mt-16 duration-300
+        hover:bg-white hover:text-black hover:border-2 border-black
+    }
+
+    .dropdown-menu{
+        @apply hidden ml-5 space-y-3 transition-transform duration-200 
+    }
+    .dropdown-menu.active{
+        @apply flex flex-col transition-transform duration-500 opacity-100 animate-slideIn
+    }
+
+
+    .dropdown{
+        @apply relative inline-block
+    }
+    .dropdown-content{
+        @apply bg-white p-3 rounded-lg space-y-2 min-w-40 pl-6 z-10 absolute pt-2 shadow-dropDown-content border border-gray-100
+        opacity-0
+    }
+    .dropdown-content.active{
+        @apply flex flex-col transition-transform duration-500 opacity-100 animate-slideIn
+    }
+}
