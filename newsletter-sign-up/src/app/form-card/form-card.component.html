@@ -1,0 +1,44 @@
+<main class="bg-slate-900 w-screen h-screen flex flex-col justify-center items-center xl:bg-slate-900">
+    <section class="form-style"[class.hidden]="isValid">
+        <img class="rounded-xl xl:hidden" src="../../assets/images/illustration-sign-up-mobile.svg" alt="">
+        <img class="hidden xl:block xl:w-[45%]" src="../../assets/images/illustration-sign-up-desktop.svg" alt="">
+        <div class="mt-8 px-4 xl:px-12">
+            <p class="text-3xl font-bold mb-4 xl:text-7xl">Stay updated!</p>
+            <p class="xl:text-xl xl:font-medium xl:py-3">Join 60,000+ prodcut managers receiving monthly updates on:</p>
+            <div class="flex  items-center mt-6">
+                <img class="w-6" src="../../assets/images/icon-success.svg" alt="">
+                <p class="ml-3 text-xl font-medium">Product discovery and building what matters</p>
+            </div>
+            <div class="flex items-center mt-6">
+                <img class="w-6" src="../../assets/images/icon-success.svg" alt="">
+                <p class="ml-3 text-xl font-medium">Measuring to ensure updates are a success</p>
+            </div>
+            <div class="flex items-center mt-6">
+                <img class="w-6" src="../../assets/images/icon-success.svg" alt="">
+                <p class="ml-3 text-xl font-medium">And much more!</p>
+            </div>
+            <div class="mt-8 flex flex-col ">
+                <div class="flex items-center justify-between">
+                    <p class="text-sm font-semibold xl:text-lg">Email address</p>
+                    <p class="advertencia-mesage"[class.active]="email.invalid && email.touched">Valid email required</p>
+                </div>
+                <input class="input-text" 
+                [class.error]="email.invalid && email.touched"
+                [formControl]="email" 
+                (keydown.Enter)="mostrarMensaje()"
+                placeholder="email@company.com">
+                <button type="submit" class="btn-form" (click)="mostrarMensaje()">Subscribe to monthly newsletter</button>
+            </div>
+        </div>
+    </section>
+    <section class="message-suceful" [class.active]="isValid">
+        <div class="my-28 xl:my-4 ">
+            <img class="w-16" src="../../assets/images/icon-list.svg" alt="">
+            <div class="mt-8">
+                <p class="text-4xl font-bold">Thanks for subscribing!</p>
+                <p class="mt-5 text-base">A confirmation email has been sent to <strong>ash#loremcopany.com</strong>. Please open it and click the button inside to confirm your subscription.</p>
+            </div>
+        </div>
+        <button class="btn-form">Dismiss mesage</button>
+    </section>
+</main>

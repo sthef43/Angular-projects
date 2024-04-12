@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .btn-form{
+        @apply bg-blue-950 text-white font-semibold rounded-lg h-14 duration-500
+        hover:bg-[#FF6156] hover:shadow-xl hover:shadow-[#ff9393] hover:transition
+    }
+    .input-text{
+        @apply border border-gray-400 mt-2 mb-5 h-14 pl-5 rounded-lg
+        focus:outline-none focus:border-black
+    }
+    .input-text.error{
+        @apply border-red-500 bg-red-100 placeholder:text-red-600
+    }
+
+
+    .advertencia-mesage{
+        @apply text-sm font-semibold xl:text-lg opacity-0 text-red-500
+    }
+    .advertencia-mesage.active{
+        @apply opacity-100
+    }
+
+    .form-style{
+        @apply p-3 max-w-[375px] rounded-lg bg-white
+        xl:rounded-2xl xl:flex xl:flex-row-reverse xl:max-w-[1280px] xl:p-8 xl:items-center xl:h-auto
+    }
+
+    .message-suceful{
+        @apply hidden p-6 max-w-[375px] rounded-lg bg-white
+        xl:rounded-2xl xl:max-w-[500px] xl:p-16
+    }
+    .message-suceful.active{
+        @apply flex flex-col
+    }
+}
