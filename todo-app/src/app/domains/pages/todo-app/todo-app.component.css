@@ -1,0 +1,82 @@
+.container {
+    width: 375px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.background-image {
+    background-image: url("../../../../assets/img/bg-mobile-dark.jpg");
+    width: 100%;
+    height: 200px;
+}
+.text-background {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem 0;
+    color: white;
+}
+.container-input-todo {
+    background-color: black;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1rem 1rem;
+    color: white;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.container-lista-todo {
+    background-color: black;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: -1.5rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+}
+.item-todo {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid red;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.item-todo p {
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.item-todo div {
+    display: flex;
+    align-items: center;
+}
+.container-contador-items{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+
+
+#input-todo {
+    width: 90%;
+    margin-left: 1rem;
+    height: 2rem;
+    color: white;
+    border: none;
+    background-color: black;
+    font-size: 1.2rem;
+}
+#input-todo {
+    outline: none;
+}

@@ -1,0 +1,27 @@
+<main class="container">
+    <figure class="background-image">
+        <div class="text-background">
+            <h2>TODO</h2>
+            <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <div class="container-input-todo">
+            <i class="fa-regular fa-circle"></i>
+            <input [formControl]="inputAgregarDato" (keydown)="aniadirTareas($event)" type="text" placeholder="Create a new todo..." id="input-todo">
+        </div>
+    </figure>
+    <section class="container-lista-todo">
+        <ul>
+            <li *ngFor="let todoListaItems of todoLista(); index as i" class="item-todo">
+                <div>
+                    <button [ngStyle]="{'color' : todoListaItems.terminado ? 'red': 'blue'}" (click)="tareaCompletada(i)"><i class="fa-regular fa-circle"></i></button>
+                    <p>{{todoListaItems.datoTodo}}</p>
+                </div>
+                <button (click)="eliminarTarea(i)"><i class="fa-solid fa-x"></i></button>
+            </li>
+        </ul>
+        <div class="container-contador-items">
+            <p>{{totalEnLista()}}</p>
+            <p>Clear Completed</p>
+        </div>
+    </section>
+</main>
